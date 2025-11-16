@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="light">
+
+    <div class="theme-toggle">
+        <label class="switch">
+            <input type="checkbox" id="themeSwitch">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="container">
+        <form id="loginForm" class="card">
+
+            <h2>Login</h2>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input id="email" type="text" />
+                <p class="error" id="emailError"></p>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <a href="#" class="forgot">Forgot password?</a>
+                <input id="password" type="password" />
+                <p class="error" id="passwordError"></p>
+            </div>
+
+
+            <button type="submit" class="btn">Sign In</button>
+        </form>
+
+        <!-- Success View -->
+        <div id="successView" class="card hidden">
+            <h2 id="welcomeText"></h2>
+            <button id="logoutBtn" class="btn">Logout</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
