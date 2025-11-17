@@ -10,28 +10,34 @@
 
 <body class="light">
 
-    <div class="theme-toggle">
-        <label class="switch">
-            <input type="checkbox" id="themeSwitch">
-            <span class="slider"></span>
-        </label>
-    </div>
-
     <div class="container">
         <form id="loginForm" class="card">
+            <div class="login-title">
+                <h1>Login</h1>
+                <div class="theme-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="themeSwitch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
 
-            <h2>Login</h2>
 
             <div class="input-group">
                 <label for="email">Email</label>
-                <input id="email" type="text" />
+                <input id="email" type="text" placeholder="test@example.com" />
                 <p class="error" id="emailError"></p>
             </div>
 
             <div class="input-group">
-                <label for="password">Password</label>
-                <a href="#" class="forgot">Forgot password?</a>
-                <input id="password" type="password" />
+                <div class="input-label">
+                    <label for="password">Password</label>
+                    <a href="#" class="forgot">Forgot password?</a>
+                </div>
+                <div class="password-wrapper">
+                    <input id="password" type="password" placeholder="Enter your password" />
+                    <img id="pwToggle" class="pw-icon" src="./assets/hide.png" alt="toggle" />
+                </div>
                 <p class="error" id="passwordError"></p>
             </div>
 

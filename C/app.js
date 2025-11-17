@@ -1,6 +1,7 @@
-// Hardcoded valid credentials
+// Valid credentials
 const validUsers = {
   "test@example.com": "Test123!",
+  "user2@example.com": "test123!A",
 };
 
 // Theme toggle
@@ -19,6 +20,17 @@ const logoutBtn = document.getElementById("logoutBtn");
 // Errors
 const emailError = document.getElementById("emailError");
 const passwordError = document.getElementById("passwordError");
+
+// Password toggle elements
+const pwInput = document.getElementById("password");
+const pwToggle = document.getElementById("pwToggle");
+
+// Toggle password visibility
+pwToggle.addEventListener("click", () => {
+  const isHidden = pwInput.type === "password";
+  pwInput.type = isHidden ? "text" : "password";
+  pwToggle.src = isHidden ? "./assets/show.png" : "./assets/hide.png";
+});
 
 // Validation helpers
 function isValidPassword(pw) {
